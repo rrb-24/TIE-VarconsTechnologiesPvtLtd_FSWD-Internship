@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ event_details.summary }}</title>
+</head>
+
+<body>
+    <h1>{{ event_details.summary }}</h1>
+    <p>Hello,</p>
+    <p>Thank you for booking {{ event_details.description }} class with Fitness Studio.</p>
+    <p>Your booking has been confirmed from {{ event_details.start_date|date:"F d, Y" }} to
+        {{ event_details.end_date|date:"F d, Y" }}.</p>
+    <p>To add this event to your Google Calendar, click the following link:</p>
+    <a href="{{ event_details.google_calendar_link }}">Add to Google Calendar</a>
+    <p>Best regards,<br>The Fitness Studio Team</p>
+</body>
+
+</html>
